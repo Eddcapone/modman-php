@@ -13,15 +13,20 @@ Currently implemented:
  - create (creates a modman file for an existing module)
  - clone (clones a git repository)
 
-
 --force is available for link, deploy, deploy-all and clone, if not set script aborts when conflicts are found
 --copy is available for deploy and deploy-all, will copy the files and folders instead of symlinking them
 
+Installation:
+
+    1. Put all files in a directory e.g. "C:\bin\modman-php\".
+    2. Add the path to the system path variable. (use google if you don't know how)
+    3. Now you can use modman from the CMD or PowerShell.
+
 Usage examples:
 
-    php modman.php init
-    php modman.php link ..\B2BProfessional
-    php modman.php deploy B2BProfessional
+    modman init
+    modman link myExtension
+    modman deploy myExtension
 
 Or directly clone which does also init and deploy:
 
