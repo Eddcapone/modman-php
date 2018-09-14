@@ -103,7 +103,9 @@ class Modman {
                 )
             ));
             $sMessage = $oException->getMessage();
-            $sCowsay = @file_get_contents('http://cowsay.morecode.org/say?message=' . urlencode($sMessage) . '&format=text', false, $rCtx);
+            $sCowsay =  PHP_EOL . PHP_EOL . "-----------NOTE-----------------" . PHP_EOL . PHP_EOL;
+            $sCowsay .= $sMessage;
+            $sCowsay .= PHP_EOL . PHP_EOL . "--------------------------------" . PHP_EOL . PHP_EOL;
             if ($sCowsay) {
                 echo $sCowsay;
             } else {
@@ -630,7 +632,6 @@ class Modman_Command_Deploy {
         }
     }
 }
-
 
 class Modman_Module_Symlink {
     private $sModuleName;
